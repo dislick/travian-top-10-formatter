@@ -1,0 +1,22 @@
+{
+  "name": "TravianStats",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Formats Travian Top10 Stats",
+  "homepage_url": "http://patrickmuff.ch",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*.travian.co.uk/statistiken.php*"
+      ],
+      "js": [
+        "inject.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs"
+  ]
+}
