@@ -14,7 +14,7 @@
   function createProgressDiv(widthPercentage) {
     let progressDiv = document.createElement('div');
     progressDiv.style.position = 'absolute';
-    progressDiv.style.background = 'rgb(224, 224, 224)';
+    progressDiv.style.background = 'rgb(224, 235, 223)';
     progressDiv.style.height = '100%';
     progressDiv.style.width = (widthPercentage * 100) + '%';
     progressDiv.style.right = '0';
@@ -35,11 +35,13 @@
       let textElement = document.createElement('div');
       textElement.style.position = 'relative';
       textElement.style.zIndex = '2';
+      textElement.style.textAlign = 'right';
       textElement.innerText = formatNumber(valueElement.innerText);
 
       valueElement.innerText = '';
       valueElement.appendChild(textElement);
       valueElement.appendChild(createProgressDiv(percentage));
+      valueElement.style.backgroundColor = 'white';
       valueElement.style.position = 'relative';
     });
   }
