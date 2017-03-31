@@ -39,7 +39,7 @@
 
       valueElement.innerText = '';
       valueElement.appendChild(textElement);
-      valueElement.appendChild(createProgressDiv());
+      valueElement.appendChild(createProgressDiv(percentage));
       valueElement.style.position = 'relative';
     });
   }
